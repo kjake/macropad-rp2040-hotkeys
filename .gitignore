@@ -1,6 +1,4 @@
 # Distribution
 boot_out.txt
 .idea
-lib/**/*.py
-lib/**/*.mpy
 .DS_Store
