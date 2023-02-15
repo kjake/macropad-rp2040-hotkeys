@@ -4,14 +4,18 @@ A growing collection of [CircuitPython](https://circuitpython.org/board/adafruit
 
 Currently, the following macro sets are included:
 
-- Universal numpad
-- Media Control Hotkeys (MacOS)
-- Zoom (MacOS)
-- Webex (MacOS)
-- MS Teams (MacOS)
+- Discord (un-tested)
 - Google Meet (MacOS)
-- Discord (Win)
-- [Sea of Thieves](https://www.seaofthieves.com/) (Win)
+- MS Teams (MacOS)
+- Slack (Universal)
+- vim (Universal)
+- Webex (MacOS)
+- YouTube (Universal)
+- Zoom (MacOS)
+
+## Additional Functions
+- Pomodoro Timer
+- Auto-sleep (5 mins)
 
 ## Configuration
 
