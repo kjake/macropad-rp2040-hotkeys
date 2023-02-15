@@ -1,13 +1,20 @@
 import board
 import digitalio
+import displayio
 import storage
+import usb_cdc
+import usb_midi
 
-# Mount the CIRCUITPY drive as read-only unless
-# the encoder switch is held down
-encoder_switch = digitalio.DigitalInOut(board.BUTTON)
-encoder_switch.switch_to_input(pull=digitalio.Pull.UP)
-if(encoder_switch.value):
-    print("Mounting Read-Only")
+from time import sleep
+
+b1 = digitalio.DigitalInOut(board.KEY1)
+b1.switch_to_input(pull=digitalio.Pull.UP)
+
+if not b1.value:
+    print("Dev mode.\nMounting drive...")
 else:
-    print("Mounting Read/Write")
-storage.remount("/", not encoder_switch.value)
+    print("Normal mode.\nDisabling drive...")
+    usb_cdc.disable()
+    storage.disable_usb_drive()
+
+usb_midi.disable()

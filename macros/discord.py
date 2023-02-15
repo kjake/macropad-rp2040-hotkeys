@@ -2,7 +2,6 @@
 
 from adafruit_hid.keycode import Keycode
 from adafruit_hid.consumer_control_code import ConsumerControlCode
-import keyconfig
 
 app = {
     'name' : 'Discord', # Application name
@@ -22,7 +21,7 @@ app = {
         (0x748cdc, 'Dec', [Keycode.ESCAPE]),
         # 4th row ----------
         (0x748cdc, 'Emoji', [Keycode.CONTROL, 'e']),
-        (0x748cdc, keyconfig.KEY_VOL_DOWN, [[ConsumerControlCode.VOLUME_DECREMENT]]),
-        (0x800f00, keyconfig.KEY_VOL_UP, [[ConsumerControlCode.VOLUME_INCREMENT]])
+        (0x748cdc, 'Vol-', [[ConsumerControlCode.VOLUME_DECREMENT]]),
+        (0x800f00, 'Vol+', [[ConsumerControlCode.VOLUME_INCREMENT]])
     ]
-}
+}# Write your code here :-)
